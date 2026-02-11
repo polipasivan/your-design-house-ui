@@ -1,0 +1,30 @@
+<div class="reserve-seat-page">
+  <a class="logo-container" routerLink="/">
+    <app-lamp-logo [width]="80" [height]="60" color="#000"></app-lamp-logo>
+  </a>
+
+  <h1 class="page-title">RESERVE YOUR SEAT AT THE BLUEPRINT BAR</h1>
+
+  <div class="subtitle-row">
+    <span class="subtitle-text">30 MIN WITH DESIGNER</span>
+    <span
+      class="info-icon"
+      (mouseenter)="showTooltip = true"
+      (mouseleave)="showTooltip = false">
+      ?
+    </span>
+    <div class="tooltip" [class.visible]="showTooltip">
+      1-2 page reference guide delivered within 24 hours
+    </div>
+  </div>
+
+  <p class="select-text">select your seat.</p>
+
+  <div class="embed-container">
+    <iframe
+      [src]="calendlyUrl"
+      class="calendly-embed"
+      title="Schedule appointment">
+    </iframe>
+  </div>
+</div>

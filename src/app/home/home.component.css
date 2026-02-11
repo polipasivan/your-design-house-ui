@@ -19,7 +19,7 @@
   z-index: 11;
 }
 
-.logo svg {
+.logo app-lamp-logo {
   display: block;
   width: 100px;
   height: 80px;

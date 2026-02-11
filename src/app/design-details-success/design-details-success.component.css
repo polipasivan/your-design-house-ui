@@ -1,0 +1,32 @@
+.success-page {
+  background-color: #f5f2ec;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 4rem;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2C3E50;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.5rem;
+  }
+}

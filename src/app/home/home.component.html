@@ -1,25 +1,9 @@
 <!-- Header -->
 <header class="header">
   <div class="header-content">
-    <div class="logo">
-      <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Hanging cord -->
-        <line x1="25" y1="0" x2="25" y2="8" stroke="#000" stroke-width="1"/>
-        <!-- Lamp shade (trapezoid) -->
-        <path d="M25 8 L5 28 L45 28 Z" fill="#000"/>
-        <!-- Scalloped bottom edge -->
-        <path d="M5 28
-                 Q8 32, 11 28
-                 Q14 32, 17 28
-                 Q20 32, 23 28
-                 Q26 32, 29 28
-                 Q32 32, 35 28
-                 Q38 32, 41 28
-                 Q44 32, 45 28
-                 L45 28 L5 28 Z"
-              fill="#000"/>
-      </svg>
-    </div>
+    <a class="logo" routerLink="/">
+      <app-lamp-logo [width]="100" [height]="80" color="#000"></app-lamp-logo>
+    </a>
     <nav class="nav">
       <a href="#blueprint-bar" class="nav-link">BLUEPRINT BAR</a>
       <a href="#full-design" class="nav-link">FULL DESIGN</a>
@@ -36,7 +20,7 @@
     <div class="blueprint-left">
       <p class="intro-text">No prep required. You'll receive a short reference guide within 24 hours.</p>
 
-      <button class="btn-primary">RESERVE A SEAT</button>
+      <button class="btn-primary" routerLink="/reserve-seat">RESERVE A SEAT</button>
 
       <div class="outcome-section">
         <h3 class="outcome-title">THE OUTCOME</h3>
@@ -71,7 +55,7 @@
     This is for clients who want to design with a designer, not just get answers. We work together across multiple sessions to clarify direction, build layouts, and develop a design plan you can execute at your own pace. While projects are scoped and priced per room, the design is approached holistically so spaces that connect visually or functionally are considered together.
   </p>
 
-  <a href="#" class="inquire-link">INQUIRE ABOUT FULL DESIGN</a>
+  <a routerLink="/design-details" class="inquire-link">INQUIRE ABOUT FULL DESIGN</a>
 </section>
 
 <!-- Footer -->

@@ -40,25 +40,22 @@ export class LampLogoComponent {
 
   get shadePath(): string {
     const topY = this.cordEnd;
-    const bottomY = this.height * 0.75;
-    const topWidth = this.width * 0.6;
-    const bottomWidth = this.width * 0.9;
-    const topLeft = (this.width - topWidth) / 2;
-    const topRight = topLeft + topWidth;
+    const bottomY = this.height * 0.7;
+    const bottomWidth = this.width * 0.8;
     const bottomLeft = (this.width - bottomWidth) / 2;
     const bottomRight = bottomLeft + bottomWidth;
 
-    return `M ${topLeft} ${topY} L ${topRight} ${topY} L ${bottomRight} ${bottomY} L ${bottomLeft} ${bottomY} Z`;
+    return `M ${this.centerX} ${topY} L ${bottomLeft} ${bottomY} L ${bottomRight} ${bottomY} Z`;
   }
 
   get scallopPath(): string {
-    const y = this.height * 0.75;
-    const bottomWidth = this.width * 0.9;
+    const y = this.height * 0.7;
+    const bottomWidth = this.width * 0.8;
     const startX = (this.width - bottomWidth) / 2;
     const endX = startX + bottomWidth;
-    const scallops = 9;
+    const scallops = 7;
     const scallopWidth = bottomWidth / scallops;
-    const dip = this.height * 0.083;
+    const dip = this.height * 0.1;
 
     let path = `M ${startX} ${y}`;
     for (let i = 0; i < scallops; i++) {
