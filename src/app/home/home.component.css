@@ -1,0 +1,304 @@
+/* Header */
+.header {
+  background-color: #f5f2ec;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  z-index: 11;
+}
+
+.logo svg {
+  display: block;
+  width: 100px;
+  height: 80px;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  margin-left: 140px;
+}
+
+.nav-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #000;
+}
+
+.nav-link:first-child {
+  margin-right: 2rem;
+}
+
+.nav-link:hover {
+  background-color: #000;
+  color: #f5f2ec;
+}
+
+/* Blueprint Bar Section */
+.blueprint-section {
+  background-color: #f5f2ec;
+  padding: 2rem 2rem 2rem;
+}
+
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 0.5rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 1.5rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blueprint-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.blueprint-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intro-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+}
+
+.btn-primary {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f5f2ec;
+  background-color: #000;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.outcome-section {
+  margin-top: 1rem;
+}
+
+.outcome-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 1rem 0;
+}
+
+.outcome-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.outcome-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  color: #000;
+}
+
+.blueprint-right {
+  background-color: #e8e4dc;
+  padding: 2rem;
+}
+
+.description-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #000;
+  margin: 0 0 1rem 0;
+}
+
+.description-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Full Virtual Interior Design Section */
+.full-design-section {
+  background-color: #f5f2ec;
+  padding: 1rem 2rem 2rem;
+}
+
+.full-design-section .section-title {
+  margin-bottom: 0.5rem;
+}
+
+.full-design-section .section-subtitle {
+  margin-bottom: 1rem;
+}
+
+.full-design-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.inquire-link {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #000;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: fit-content;
+  transition: opacity 0.2s ease;
+}
+
+.inquire-link:hover {
+  opacity: 0.7;
+}
+
+/* Footer */
+.footer {
+  background-color: #f5f2ec;
+  padding: 3rem 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-email {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-email:hover {
+  opacity: 0.7;
+}
+
+.footer-location {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+  margin: 0;
+}
+
+.btn-secondary {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f5f2ec;
+  background-color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .blueprint-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}

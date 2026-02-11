@@ -1,0 +1,59 @@
+<div class="confession-container">
+  <div class="lamp-container">
+    <app-lamp-logo [width]="200" [height]="120" color="#2C3E50"></app-lamp-logo>
+  </div>
+  
+  <h1 class="main-title">
+    SOMETHING<br>
+    BOTHERING<br>
+    YOU?
+  </h1>
+  
+  <p class="subtitle">leave a one sentence design confession</p>
+  
+  <form class="form-container" #confessionForm="ngForm">
+    <div>
+      <textarea
+        class="confession-input"
+        [(ngModel)]="confession"
+        name="confession"
+        #confessionInput="ngModel"
+        required
+        placeholder="&quot;I love all of my furniture separately, but together nothing looks right&quot;"
+        rows="5"
+      ></textarea>
+      <div class="error-message" *ngIf="confessionInput.invalid && confessionInput.touched">
+        Don't forget your confession!
+      </div>
+    </div>
+
+    <div class="email-section">
+      <label class="email-label">email</label>
+      <p class="email-note">*add your email if you want the answer delivered to you</p>
+      <input
+        type="email"
+        class="email-input"
+        [class.invalid]="emailInput.errors?.['email'] && email.length > 0"
+        [(ngModel)]="email"
+        name="email"
+        #emailInput="ngModel"
+        email
+        placeholder=""
+      />
+      <div class="error-message" *ngIf="emailInput.errors?.['email'] && email.length > 0">
+        Please enter a valid email address
+      </div>
+    </div>
+
+    <div class="error-message" *ngIf="submitError">
+      {{ submitError }}
+    </div>
+
+    <button
+      class="confess-button"
+      (click)="submitConfession()"
+      [disabled]="confessionInput.invalid || (emailInput.errors?.['email'] && email.length > 0) || isSubmitting">
+      {{ isSubmitting ? 'SUBMITTING...' : 'CONFESS' }}
+    </button>
+  </form>
+</div>
