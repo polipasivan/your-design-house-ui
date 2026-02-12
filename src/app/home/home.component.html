@@ -2,7 +2,7 @@
 <header class="header">
   <div class="header-content">
     <a class="logo" routerLink="/">
-      <app-lamp-logo [width]="100" [height]="80" color="#000"></app-lamp-logo>
+      <app-lamp-logo [width]="100" [height]="80" color="#1f2933"></app-lamp-logo>
     </a>
     <nav class="nav">
       <a href="#blueprint-bar" class="nav-link">BLUEPRINT BAR</a>
@@ -55,8 +55,75 @@
     This is for clients who want to design with a designer, not just get answers. We work together across multiple sessions to clarify direction, build layouts, and develop a design plan you can execute at your own pace. While projects are scoped and priced per room, the design is approached holistically so spaces that connect visually or functionally are considered together.
   </p>
 
-  <a routerLink="/design-details" class="inquire-link">INQUIRE ABOUT FULL DESIGN</a>
+  <a class="inquire-link" (click)="openModal()">INQUIRE ABOUT FULL DESIGN</a>
 </section>
+
+<!-- Design Details Modal -->
+<div class="modal-overlay" *ngIf="showModal" (click)="onOverlayClick($event)">
+  <div class="modal-content">
+    <!-- Form View -->
+    <div *ngIf="modalView === 'form'" class="modal-form-view">
+      <div class="modal-logo">
+        <app-lamp-logo [width]="80" [height]="60" color="#1f2933"></app-lamp-logo>
+      </div>
+
+      <h1 class="modal-title">REQUEST FULL DESIGN DETAILS</h1>
+
+      <form class="modal-form" #detailsForm="ngForm">
+        <div class="modal-field-group">
+          <label class="modal-field-label">name</label>
+          <input
+            type="text"
+            class="modal-field-input"
+            [(ngModel)]="name"
+            name="name"
+            #nameInput="ngModel"
+            required
+          />
+          <div class="modal-error" *ngIf="nameInput.invalid && nameInput.touched">
+            please add a name
+          </div>
+        </div>
+
+        <div class="modal-field-group">
+          <label class="modal-field-label">email</label>
+          <input
+            type="email"
+            class="modal-field-input"
+            [(ngModel)]="email"
+            name="email"
+            #emailInput="ngModel"
+            required
+            email
+          />
+          <div class="modal-error" *ngIf="emailInput.touched && emailInput.errors?.['required']">
+            please enter a email
+          </div>
+          <div class="modal-error" *ngIf="emailInput.touched && emailInput.errors?.['email'] && !emailInput.errors?.['required']">
+            please enter a valid email
+          </div>
+        </div>
+
+        <button
+          class="modal-send-button"
+          type="submit"
+          [disabled]="detailsForm.invalid"
+          (click)="onSubmit()">
+          SEND
+        </button>
+      </form>
+    </div>
+
+    <!-- Success View -->
+    <div *ngIf="modalView === 'success'" class="modal-success-view">
+      <div class="modal-logo">
+        <app-lamp-logo [width]="80" [height]="60" color="#1f2933"></app-lamp-logo>
+      </div>
+
+      <h1 class="modal-title">DETAILS ARE ON THE WAY.</h1>
+    </div>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="footer">

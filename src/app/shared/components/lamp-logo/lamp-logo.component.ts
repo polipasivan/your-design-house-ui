@@ -24,7 +24,7 @@ import { Component, Input } from '@angular/core';
 export class LampLogoComponent {
   @Input() width: number = 200;
   @Input() height: number = 120;
-  @Input() color: string = '#2C3E50';
+  @Input() color: string = '#1f2933';
 
   get viewBox(): string {
     return `0 0 ${this.width} ${this.height}`;

@@ -17,7 +17,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #000;
+  color: #1f2933;
   text-align: center;
   margin: 0 0 1.5rem;
   max-width: 900px;
@@ -37,7 +37,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #000;
+  color: #1f2933;
 }
 
 .info-icon {
@@ -47,11 +47,11 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1.5px solid #000;
+  border: 1.5px solid #1f2933;
   font-family: 'Inter', sans-serif;
   font-size: 0.5rem;
   font-weight: 600;
-  color: #000;
+  color: #1f2933;
   cursor: pointer;
   position: relative;
   top: -8px;
@@ -64,7 +64,7 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: #e8e4dc;
-  color: #000;
+  color: #1f2933;
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
@@ -83,7 +83,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 400;
-  color: #000;
+  color: #1f2933;
   margin: 0 0 1rem;
   align-self: center;
 }
@@ -91,8 +91,9 @@
 .embed-container {
   width: 100%;
   max-width: 700px;
-  aspect-ratio: 4 / 3;
-  border: 1.5px solid #000;
+  min-width: 320px;
+  height: 700px;
+  border: 1.5px solid #1f2933;
   background-color: #f5f2ec;
 }
 
