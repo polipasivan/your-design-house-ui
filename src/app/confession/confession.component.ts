@@ -3,11 +3,10 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
-import { LampLogoComponent } from '../shared/components/lamp-logo/lamp-logo.component';
 
 @Component({
   selector: 'app-confession',
-  imports: [FormsModule, CommonModule, LampLogoComponent, RouterLink],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './confession.component.html',
   styleUrl: './confession.component.css'
 })

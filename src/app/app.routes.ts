@@ -6,7 +6,7 @@ import { ReserveSeatComponent } from './reserve-seat/reserve-seat.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'reserve-seat', component: ReserveSeatComponent },
+  { path: 'blueprint-bar', component: ReserveSeatComponent },
   { path: 'confession', component: ConfessionComponent },
   { path: 'confession/success', component: ConfessionSuccessComponent },
   { path: '**', redirectTo: '' }

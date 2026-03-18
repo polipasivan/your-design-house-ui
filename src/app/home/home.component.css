@@ -8,27 +8,26 @@
 
 .header-content {
   display: flex;
-  align-items: flex-start;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
-  position: absolute;
-  left: 1.5rem;
-  top: 0;
-  z-index: 11;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 1.5rem;
 }
 
-.logo app-lamp-logo {
-  display: block;
-  width: 100px;
-  height: 80px;
+.logo-img {
+  width: 180px;
+  height: auto;
 }
 
 .nav {
   display: flex;
-  flex: 1;
-  margin-left: 140px;
+  width: 100%;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
 }
 
 .nav-link {
@@ -44,16 +43,30 @@
   color: #1f2933;
   text-decoration: none;
   padding: 1rem 1.5rem;
-  transition: background-color 0.2s ease;
   border-bottom: 1px solid #1f2933;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
 }
 
-.nav-link:first-child {
-  margin-right: 2rem;
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f2933;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::before {
+  transform: translateX(0);
 }
 
 .nav-link:hover {
-  background-color: #1f2933;
   color: #f5f2ec;
 }
 
@@ -253,6 +266,12 @@
   margin-bottom: 1.5rem;
 }
 
+.modal-logo .lamp-img {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
 .modal-title {
   font-family: 'Inter', sans-serif;
   font-size: 1.75rem;
@@ -405,17 +424,29 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-  }
-
-  .logo {
-    width: 100%;
-    justify-content: center;
+  .logo-img {
+    width: 140px;
   }
 
   .nav {
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    flex: none;
+    width: auto;
+    border-bottom: 1px solid #1f2933;
+  }
+
+  .nav-link::before {
+    transform: translateY(-100%);
+  }
+
+  .nav-link:hover::before {
+    transform: translateY(0);
   }
 
   .blueprint-content {

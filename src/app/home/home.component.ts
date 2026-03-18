@@ -3,12 +3,11 @@ import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { LampLogoComponent } from '../shared/components/lamp-logo/lamp-logo.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, LampLogoComponent, FormsModule, CommonModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -12,6 +12,12 @@
   margin-bottom: 60px;
 }
 
+.lamp-img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
 .main-title {
   font-size: 4rem;
   font-weight: 900;

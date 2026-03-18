@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LampLogoComponent } from '../shared/components/lamp-logo/lamp-logo.component';
 
 @Component({
   selector: 'app-confession-success',
   standalone: true,
-  imports: [LampLogoComponent, RouterLink],
+  imports: [RouterLink],
   templateUrl: './confession-success.component.html',
   styleUrl: './confession-success.component.css'
 })

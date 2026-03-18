@@ -1,13 +1,12 @@
 import { Component, AfterViewInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LampLogoComponent } from '../shared/components/lamp-logo/lamp-logo.component';
 
 declare const Calendly: any;
 
 @Component({
   selector: 'app-reserve-seat',
   standalone: true,
-  imports: [LampLogoComponent, RouterLink],
+  imports: [RouterLink],
   templateUrl: './reserve-seat.component.html',
   styleUrl: './reserve-seat.component.css'
 })

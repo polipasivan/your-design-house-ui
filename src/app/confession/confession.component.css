@@ -15,7 +15,9 @@
   margin-bottom: 40px;
 }
 
-.lamp-container svg {
+.lamp-img {
+  width: 200px;
+  height: auto;
   display: block;
 }
 
