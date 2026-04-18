@@ -3,11 +3,13 @@ import { HomeComponent } from './home/home.component';
 import { ConfessionComponent } from './confession/confession.component';
 import { ConfessionSuccessComponent } from './confession-success/confession-success.component';
 import { ReserveSeatComponent } from './reserve-seat/reserve-seat.component';
+import { ContinueComponent } from './continue/continue.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'blueprint-bar', component: ReserveSeatComponent },
   { path: 'confession', component: ConfessionComponent },
   { path: 'confession/success', component: ConfessionSuccessComponent },
+  { path: 'continue', component: ContinueComponent },
   { path: '**', redirectTo: '' }
 ];
